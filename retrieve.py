@@ -15,7 +15,6 @@ def choppunc(stri):
 def preprocess(utterance):
 
 	stop_words,missing,quantifier,replacements,start,wrongNE = loadConfig('Retrieve')
-
 	sent = choppunc(utterance)
 	b = sent.split()
 	b[0] = b[0].lower().capitalize()
@@ -62,9 +61,6 @@ def preprocess(utterance):
 
 
 	return elem
-
-
-
 
 def retrieve(utterance):
 
