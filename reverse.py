@@ -45,7 +45,7 @@ def getAntonym(word):
 			for w in synonymsset:
 				if w in antonyms:
 					return antonyms[word.lower()]
-			return "great"
+			return "not "+word
 		else:
 			return antonymsset[0]
 	else:
