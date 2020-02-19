@@ -11,3 +11,7 @@ To do this follow the steps below
 Clone this repo.
 
   - cd R-3
+  - install nltk
+  - To reverse the valence of the input 
+    - Run python reverse.py $input
+    - This will print the output in the console , you can change it to output to a file
