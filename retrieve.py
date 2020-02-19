@@ -21,8 +21,7 @@ def preprocess(utterance):
 	b[0] = b[0].lower().capitalize()
 	c = nltk.pos_tag(b)
 	d = nltk.ne_chunk(c,binary=True)
-	if 'riving' in utterance:
-		print(d)
+	
 
 	m = {}
 	for val in d:
@@ -64,11 +63,12 @@ def preprocess(utterance):
 	return elem
 
 
+def getCommonSense(utterance):
+	os.system('python comet-commonsense/scripts/generate/generate_conceptnet_arbitrary.py --model_file pretrained_models/conceptnet_pretrained_model.pickle --input "'+utterance+'" --output_file temp/output.json --device 0 --sampling_algorithm beam-5')
+	output = json.load(open('temp/output.json', "r"))
 
 
 def retrieve(utterance):
-
 	modified_utterance = preprocess(utterance)
-	commonsense = getCommonSense(modified_utterance)
-	return commonsense
+	getCommonSense(modified_utterance)
 
