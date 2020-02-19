@@ -62,4 +62,5 @@ Clone this repo.
 
       ```
       tar -xvzf pretrained_models.tar.gz
-
+      
+    - Run python retrieve.py $input
