@@ -4,10 +4,7 @@ from nltk.corpus import sentiwordnet as swn
 from nltk import sent_tokenize, word_tokenize, pos_tag
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from loadconfig import loadConfig
-
-
-
-
+import sys
 
 
 def getWordNetAntonyms():
@@ -28,7 +25,6 @@ def findIfendingwithnt(utterance):
 	d = {"didn't": "did","don't": "do","doesn't":"does","can't": "can",
 	"cannot":"can","wouldn't":"would","shouldn't":"should"}
 	words = utterance.split()
-	print(words)
 	for w in words:
 		if w in d:
 			return w,d[w],True
@@ -72,6 +68,7 @@ def ifTwoNegation(utterance):
 
 
 def isThereOnlyOneNegation(utterance):
+	exception_vadarneg_words, missing_vadarneg_words= loadConfig('ROV')
 	sid = SentimentIntensityAnalyzer()
 	count = 0
 	word = ''
@@ -121,3 +118,4 @@ def reverse_valence(utterance):
 	else:
 		return utterance.replace(negative,getAntonym(negative)).capitalize()
 
+print(reverse_valence(sys.argv[1]))
