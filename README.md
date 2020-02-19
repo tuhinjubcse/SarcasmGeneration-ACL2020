@@ -49,4 +49,15 @@ Clone this repo.
       python scripts/data/make_atomic_data_loader.py
       python scripts/data/make_conceptnet_data_loader.py
       ```
+      
+      First, download the pretrained models from the following link:
+
+      ```
+      https://drive.google.com/open?id=1FccEsYPUHnjzmX-Y5vjCBeyRt1pLo8FB
+      ```
+
+      Then untar the file:
+
+      ```
+      tar -xvzf pretrained_models.tar.gz
 
