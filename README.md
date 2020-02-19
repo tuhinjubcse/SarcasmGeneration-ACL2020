@@ -18,9 +18,9 @@ Clone this repo.
     - This will print the output in the console , you can change it to output to a file
   
   - To retrieve the commonsense keyword associated with the input (RETRIEVE) follow below
-        
   
-       cd comet-commonsense
+    -cd comet-commonsense
+    
        To run the setup scripts to acquire the pretrained model files from OpenAI, as well as the ATOMIC and ConceptNet datasets
 
       ```
