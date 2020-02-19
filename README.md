@@ -10,4 +10,4 @@ To do this follow the steps below
 
 Clone this repo.
 
-cd R-3
+  - cd R-3
