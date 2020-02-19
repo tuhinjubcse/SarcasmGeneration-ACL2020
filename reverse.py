@@ -5,6 +5,7 @@ from nltk import sent_tokenize, word_tokenize, pos_tag
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from loadconfig import loadConfig
 import sys
+import os
 
 
 def getWordNetAntonyms():
@@ -33,17 +34,20 @@ def findIfendingwithnt(utterance):
 def getAntonym(word):
 	antonyms = getWordNetAntonyms()
 	if word.lower() not in antonyms:
-		synonyms = []
-		antonyms = []
+		synonymsset = []
+		antonymsset = []
 		for syn in wn.synsets(word.lower()):
 			for l in syn.lemmas():
-				synonyms.append(l.name())
+				synonymsset.append(l.name())
 				if l.antonyms():
-					antonyms.append(l.antonyms()[0].name())
-		if len(antonyms)==0:
+					antonymsset.append(l.antonyms()[0].name())
+		if len(antonymsset)==0:
+			for w in synonymsset:
+				if w in antonyms:
+					return antonyms[word.lower()]
 			return "great"
 		else:
-			return antonyms[0]
+			return antonymsset[0]
 	else:
 		return antonyms[word.lower()]
 
@@ -86,7 +90,7 @@ def isThereOnlyOneNegation(utterance):
 				word = w
 	if count==1:
 		return word,True
-	return '',False
+	return 'cant_change',False
 
 
 
