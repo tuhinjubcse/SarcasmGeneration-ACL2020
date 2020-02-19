@@ -50,6 +50,8 @@ Clone this repo.
       python scripts/data/make_conceptnet_data_loader.py
       ```
       
+      <h1> Download pretrained COMET </h1>
+      
       First, download the pretrained models from the following link:
 
       ```
