@@ -4,7 +4,8 @@ import pickle
 import json
 import argparse
 
-sys.path.append(os.getcwd())
+sys.path.append(os.getcwd()+'/comet-commonsense')
+print(sys.path)
 import torch
 
 import src.models.models as models
@@ -18,6 +19,8 @@ from src.data.utils import TextEncoder
 from tqdm import tqdm
 
 from src.evaluate.sampler import BeamSampler, GreedySampler, TopKSampler
+
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--device", type=int, default=0)
@@ -39,13 +42,13 @@ if opt.data.get("maxr", None) is None:
     else:
         opt.data.maxr = 1
 
-path = "data/conceptnet/processed/generation/{}.pickle".format(
+path = "comet-commonsense/data/conceptnet/processed/generation/{}.pickle".format(
     utils.make_name_string(opt.data))
 data_loader = data.make_data_loader(opt)
 loaded = data_loader.load_data(path)
 
-encoder_path = "model/encoder_bpe_40000.json"
-bpe_path = "model/vocab_40000.bpe"
+encoder_path = "comet-commonsense/model/encoder_bpe_40000.json"
+bpe_path = "comet-commonsense/model/vocab_40000.bpe"
 
 text_encoder = TextEncoder(encoder_path, bpe_path)
 
