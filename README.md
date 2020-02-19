@@ -15,6 +15,7 @@ Clone this repo.
   
   - <h1> To reverse the valence of the input (REVERSE) </h1>
     - Run python reverse.py $input
+    
     - This will print the output in the console , you can change it to output to a file
   
   - <h1> To retrieve the commonsense keyword associated with the input (RETRIEVE) </h1>
