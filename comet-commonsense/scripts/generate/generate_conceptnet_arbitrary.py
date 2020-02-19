@@ -68,9 +68,9 @@ model = models.make_model(
 models.load_state_dict(model, model_stuff["state_dict"])
 
 cfg.device = args.device
-# cfg.do_gpu = True
-# torch.cuda.set_device(cfg.device)
-# model.cuda(cfg.device)
+cfg.do_gpu = True
+torch.cuda.set_device(cfg.device)
+model.cuda(cfg.device)
 
 model.eval()
 
@@ -81,15 +81,6 @@ print(args.input)
 sample_inputs = []
 val = {"e1":args.input, "r": "Causes"}
 sample_inputs.append(val)
-# print(os.getcwd())
-# f = open('/Users/tuhinchakrabarty/Desktop/Results/R-3/comet-commonsense/temp/input.txt','r')
-# print(f.readlines())
-# for line in open(os.getcwd()+'/temp/input.txt','r'):
-#     print('here')
-#     sample_inputs.append({"e1":line.strip(), "r": "Causes"})
-
-# sample_inputs = json.load(open(args.input_file, "r"))
-print(sample_inputs,type(sample_inputs),sample_inputs[0],type(sample_inputs[0]))
 
 if "bs" in opt.eval:
     opt.eval.pop("bs")
@@ -107,7 +98,6 @@ else:
 
 outputs = []
 
-print(len(sample_inputs))
 
 for input_case in tqdm(sample_inputs):
     e1 = input_case["e1"]
