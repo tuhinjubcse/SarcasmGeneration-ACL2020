@@ -13,11 +13,11 @@ Clone this repo.
   - cd R-3
   - install nltk
   
-  - To reverse the valence of the input (REVERSE) 
+  - <h1> To reverse the valence of the input (REVERSE) </h1>
     - Run python reverse.py $input
     - This will print the output in the console , you can change it to output to a file
   
-  - To retrieve the commonsense keyword associated with the input (RETRIEVE) follow below
+  - <h1> To retrieve the commonsense keyword associated with the input (RETRIEVE) </h1>
   
     - cd comet-commonsense
     
