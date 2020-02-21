@@ -8,6 +8,8 @@ We convert a non-sarcastic utterance to a sarcastic
 
 To do this follow the steps below
 
+
+
 Clone this repo.
 
   - cd R-3
@@ -41,6 +43,13 @@ Clone this repo.
       pip install tqdm
       pip install pandas
       pip install ipython
+      
+      git clone https://github.com/clips/pattern
+      cd pattern
+      git fetch
+      git checkout development
+      pip install mysqlclient
+      python setup.py install
       ```
       <h1> Making the Data Loaders </h1>
 
