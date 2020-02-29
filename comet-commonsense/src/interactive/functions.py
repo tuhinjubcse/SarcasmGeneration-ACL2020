@@ -200,7 +200,8 @@ def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relat
                 data_loader.max_e1 + data_loader.max_r,
                 data_loader.max_e2)
 
-        sequence_all['beams'] = sampling_result["beams"]
+        a,b = utils.filter_beam_output(sampling_result["beams"],e1)
+        sequence_all['beams'] = [a,b]
 
         # print_conceptnet_sequence(sequence_all)
 

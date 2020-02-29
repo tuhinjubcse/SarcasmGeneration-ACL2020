@@ -14,6 +14,7 @@ def getWordNetAntonyms():
 		m[line.strip().split()[0]]= line.strip().split()[1]
 	return m
 
+
 def findIfnegationPresent(utterance):
 	words = utterance.split()
 	for w in words:
@@ -30,6 +31,7 @@ def findIfendingwithnt(utterance):
 		if w in d:
 			return w,d[w],True
 	return '','',False
+
 
 def getAntonym(word):
 	antonyms = getWordNetAntonyms()
@@ -50,6 +52,7 @@ def getAntonym(word):
 			return antonymsset[0]
 	else:
 		return antonyms[word.lower()]
+
 
 def ifTwoNegation(utterance):
 	exception_vadarneg_words, missing_vadarneg_words= loadConfig('ROV')
@@ -97,6 +100,7 @@ def isThereOnlyOneNegation(utterance):
 #TODO In future work used improved negation
 #Current style/sentiment transfer techniques are still at low accuracy
 def reverse_valence(utterance):
+	
 	if 'should be' in utterance or 'would be' in utterance:
 		return utterance.replace(' be ',' not be ')
 	if ' need to ' in utterance:

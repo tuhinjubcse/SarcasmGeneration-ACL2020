@@ -62,8 +62,8 @@ replacement:
   - "women not ,women "
   - "way long ,long "
   - "being stuck ,stuck "
-  - "sunday afternoons ,afternoons"
-  - "not fun,fun"
+  - "sunday afternoons ,afternoons "
+  - "not fun,fun "
   - "ten day ,"
 
 wrongNE:
@@ -74,4 +74,5 @@ wrongNE:
   - London
   - Battery
   - Horror
+  - Mid
 

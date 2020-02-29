@@ -5,10 +5,16 @@ import json
 from loadconfig import loadConfig
 import os
 import sys
+import ast
+from urllib.parse import quote
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
 
 sys.path.append(os.getcwd()+'/comet-commonsense')
+m = {}
+words = []
 
-
+from pattern.en import conjugate, lemma, lexeme, PRESENT, PAST, SG,PARTICIPLE
 
 
 def choppunc(stri):
@@ -17,23 +23,25 @@ def choppunc(stri):
 	else:
 		return stri
 
+
 def preprocess(utterance):
 
-	stop_words,missing,quantifier,replacements,start,wrongNE = loadConfig('Retrieve')
+	stop_words, missing, quantifier, replacements, start, wrongNE = loadConfig(
+	    'Retrieve')
 	sent = choppunc(utterance)
 	b = sent.split()
 	b[0] = b[0].lower().capitalize()
 	c = nltk.pos_tag(b)
-	d = nltk.ne_chunk(c,binary=True)
+	d = nltk.ne_chunk(c, binary=True)
 	m = {}
 	for val in d:
-		if str(type(val))=="<class 'nltk.tree.Tree'>":
+		if str(type(val)) == "<class 'nltk.tree.Tree'>":
 			for v in val:
-				m[v[0]]=val.label()
+				m[v[0]] = val.label()
 		else:
-			m[val[0]]="NNE"
-	for u,v in c:
-		if (v =='NNP' and m[u]=='NE' and u not in wrongNE) or (v=='CD' and u not in quantifier) or u==',' or u=='U.S':
+			m[val[0]] = "NNE"
+	for u, v in c:
+		if (v == 'NNP' and m[u] == 'NE' and u not in wrongNE) or (v == 'CD' and u not in quantifier) or u == ',' or u == 'U.S':
 			stop_words.append(u.lower())
 
 	x = sent.lower().split()
@@ -43,22 +51,22 @@ def preprocess(utterance):
 		w = x[i]
 		if (w not in stop_words):
 			elem.append(w)
-	
-	if len(elem)>=5 and missing[0] in elem:
-		elem = ' '.join(elem).replace(' .','.')
-		elem = elem.replace(' '+missing[0],'')
+
+	if len(elem) >= 5 and missing[0] in elem:
+		elem = ' '.join(elem).replace(' .', '.')
+		elem = elem.replace(' '+missing[0], '')
 	else:
-		elem = ' '.join(elem).replace(' .','.')
+		elem = ' '.join(elem).replace(' .', '.')
+
 
 	for v in start:
 		if elem.startswith(v):
-			elem = elem.replace(v+' ','')
-	
+			elem = elem.replace(v+' ', '')
+
 	for v in replacements:
 		rep = v.split(',')
 		if rep[0] in elem:
-			elem = elem.replace(rep[0],rep[1])
-
+			elem = elem.replace(rep[0], rep[1])
 
 	return elem
 
@@ -69,9 +77,13 @@ def getCommonSense(utterance):
 	return output
 
 
-def retrieve(utterance):
+def retrieveCommonSense(utterance):
 	modified_utterance = preprocess(utterance)
 	return getCommonSense(modified_utterance)
+
+
+print(retrieveCommonSense(sys.argv[1]))
+
 
 
 

@@ -10,8 +10,6 @@ def loadConfigForROV():
 					exception_vadarneg_words=v
 				elif k=="missing_vadarneg_words":
 					missing_vadarneg_words=v
-				else:
-					print(v[0].split(','))
 	return exception_vadarneg_words,missing_vadarneg_words
 
 
