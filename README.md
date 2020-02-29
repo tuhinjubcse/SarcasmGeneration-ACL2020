@@ -1,4 +1,4 @@
-# R-3
+# SarcasmGeneration-ACL2020
 
 The input for our experiments are located in the folder data/non-sarcastic.txt
 
@@ -12,7 +12,7 @@ To do this follow the steps below
 
 Clone this repo.
 
-  - cd R-3
+  - cd SarcasmGeneration-ACL2020
   - install nltk
   
   - <h1> To reverse the valence of the input (REVERSE) </h1>
