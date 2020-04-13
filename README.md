@@ -82,4 +82,3 @@ Clone this repo.
       tar -xvzf pretrained_models.tar.gz
       
     - Run python retrieve.py $input
-    - Remember your directory should resemble this (https://github.com/PlusLabNLP/R-3/blob/master/comet-commonsense/README.md)
