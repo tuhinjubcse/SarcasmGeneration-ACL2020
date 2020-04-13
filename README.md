@@ -82,3 +82,6 @@ Clone this repo.
       tar -xvzf pretrained_models.tar.gz
       
     - Run python retrieve.py $input
+    
+ Make sure your directory resembles this 
+ https://github.com/tuhinjubcse/SarcasmGeneration-ACL2020/blob/master/comet-commonsense/directory.md
