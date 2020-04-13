@@ -5,7 +5,6 @@ import json
 import argparse
 
 sys.path.append(os.getcwd()+'/comet-commonsense')
-print(sys.path)
 import torch
 
 import src.models.models as models
@@ -80,7 +79,6 @@ model.eval()
 # Format
 # {"e1": seed entity, "r": desired relation (i.e., PartOf)}
 # Capitalization must be maintained
-print(args.input)
 sample_inputs = []
 val = {"e1":args.input, "r": "Causes"}
 sample_inputs.append(val)
