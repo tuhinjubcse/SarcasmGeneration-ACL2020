@@ -164,4 +164,3 @@ def getGenders(names):
 				retrn.append((u'None',u'0.0',0.0))
 	return retrn
 
-getGenders("Tuhin")

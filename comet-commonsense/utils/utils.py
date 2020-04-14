@@ -169,14 +169,11 @@ def getSentencesOnline(keyword):
 
 
 def getSentences(keyword):
-    print("Keyword is",keyword)
     concepts = getAllConcepts()
     if keyword in concepts:
-        print(keyword)
         retrieval_corpus = open(os.getcwd()+'/data/corpus.txt')
         sentences = [sent.strip() for sent in retrieval_corpus.readlines()]
         s = filterSentences(keyword,sentences)
-        print(len(s),s)
         if len(s)>0:
             return s
     else:
@@ -187,7 +184,6 @@ def getSentences(keyword):
 
 
 def filter_beam_output(arr, inp):
-    print("Beam is ",arr)
     words = inp.split()
     stop_phrase = ['person to be','person to get','person will','you will','you to',
     'her to be','you have','get into','you to be','they get','have','you to get','waste']

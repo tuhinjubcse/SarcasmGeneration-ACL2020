@@ -82,17 +82,8 @@ def retrieveCommonSense(utterance):
 	return getCommonSense(modified_utterance)
 
 
-
-#f = open('commonsense1.txt','w')
-for line in []: #open('done.txt'):
-	line = line.strip()[:-1]
-	op = retrieveCommonSense(line)
-	if op[1]!='':
-		f.write(op[0]+'\t'+op[1]+'\n')
-	else:
-		f.write(op[0]+'\n')
-		
-print(retrieveCommonSense(sys.argv[1]))
+	
+#print(retrieveCommonSense(sys.argv[1]))
 
 
 
