@@ -82,7 +82,7 @@ def retrieveCommonSense(utterance):
 	return getCommonSense(modified_utterance)
 
 
-	
+
 #print(retrieveCommonSense(sys.argv[1]))
 
 

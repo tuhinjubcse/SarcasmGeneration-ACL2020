@@ -5,7 +5,7 @@ from grammar import correct_grammar
 from loadconfig import loadConfig
 import random
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
 
 

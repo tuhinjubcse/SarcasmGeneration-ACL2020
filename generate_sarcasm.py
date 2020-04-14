@@ -7,7 +7,7 @@ roberta = getRoberta()
 
 utterance = sys.argv[1]
 rov = reverse_valence(utterance).capitalize()
-op = retrieveCommonSense(rov)
+op = retrieveCommonSense(utterance)
 commonsense, extra = op[0], op[1]
 mostincongruent = rankContext(roberta,rov,commonsense,extra)
 sarcasm = rov + ' '+ mostincongruent
