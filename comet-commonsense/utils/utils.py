@@ -11,7 +11,6 @@ from pattern.en import conjugate, lemma, lexeme,PRESENT,PAST,PARTICIPLE,SG
 m = {}
 import os
 words = []
-print(os.getcwd())
 sw = ['feel','allerg','marr','lose']
 
 def make_new_tensor_from_list(items, device_num, dtype=torch.float32):
