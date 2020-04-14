@@ -85,3 +85,11 @@ Clone this repo.
     
  Make sure your directory resembles this 
  https://github.com/tuhinjubcse/SarcasmGeneration-ACL2020/blob/master/comet-commonsense/directory.md
+ 
+ 
+ 
+  - <h1> Finally to generate sarcasm , pick an utterance from data/non-sarcastic.txt and run the following command (REVERSE) </h1>
+  
+    - Run python generate_sarcasm.py $input
+    - This will print the output in the console
+ 
