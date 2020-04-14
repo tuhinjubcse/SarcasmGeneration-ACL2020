@@ -92,4 +92,3 @@ Clone this repo.
   
     - Run python generate_sarcasm.py $input
     - This will print the output in the console
- 
