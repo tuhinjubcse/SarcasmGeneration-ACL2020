@@ -4,6 +4,8 @@ from sentence_retriever import getSentences
 from grammar import correct_grammar
 from loadconfig import loadConfig
 import random
+import os
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
 
 
 
@@ -12,6 +14,7 @@ correct_phrase = loadConfig('Rank')
 
 def getRoberta():
 	roberta = torch.hub.load('pytorch/fairseq', 'roberta.large.mnli')
+	roberta.cuda()
 	roberta.eval()
 	return roberta
 
@@ -21,7 +24,7 @@ def getContradictionScores(roberta,sentences,rov):
 	for sent in sentences:
 		sent,gender = correct_grammar(rov,sent,gender)
 		tokens = roberta.encode(rov, sent)
-		value = roberta.predict('mnli', tokens).detach().numpy()
+		value = roberta.predict('mnli', tokens).cpu().detach().numpy()
 		value = round(value[0].tolist()[0],3)
 		scores.append((value,sent.capitalize()))
 
