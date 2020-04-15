@@ -31,7 +31,7 @@ Clone this repo.
 
   
   - <h1> To just retrieve the commonsense keyword associated with the input (RETRIEVE) </h1>
-    - Download the retreival corpus from the timestamp of the experiment 
+    - Download the retreival corpus from the timestamp of the experiment and put inside data folder
     (https://drive.google.com/file/d/1lE_RqFQKDdmBxXtHBT5tEvzpdITHybUC/view?usp=sharing)
   
     - cd comet-commonsense
