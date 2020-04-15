@@ -32,8 +32,7 @@ Clone this repo.
   
   - <h1> To retrieve the commonsense keyword associated with the input (RETRIEVE) </h1>
     - Download the retreival corpus from the timestamp of the experiment and put inside data folder
-    (https://drive.google.com/file/d/1lE_RqFQKDdmBxXtHBT5tEvzpdITHybUC/view?usp=sharing)
-  
+      (https://drive.google.com/file/d/1Yy8TZhZULSEo8Nmhr4WE-KonYIICw4B4/view?usp=sharing)  
     - cd comet-commonsense
     
        To run the setup scripts to acquire the pretrained model files from OpenAI, as well as the ATOMIC and ConceptNet datasets
