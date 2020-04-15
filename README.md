@@ -30,7 +30,7 @@ Clone this repo.
     - This will print the output in the console
 
   
-  - <h1> To just retrieve the commonsense keyword associated with the input (RETRIEVE) </h1>
+  - <h1> To retrieve the commonsense keyword associated with the input (RETRIEVE) </h1>
     - Download the retreival corpus from the timestamp of the experiment and put inside data folder
     (https://drive.google.com/file/d/1lE_RqFQKDdmBxXtHBT5tEvzpdITHybUC/view?usp=sharing)
   
@@ -83,7 +83,6 @@ Clone this repo.
       ```
       tar -xvzf pretrained_models.tar.gz
       
-    - Run python retrieve.py $input
     
  Make sure your directory resembles this 
  https://github.com/tuhinjubcse/SarcasmGeneration-ACL2020/blob/master/comet-commonsense/directory.md
