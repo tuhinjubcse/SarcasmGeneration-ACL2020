@@ -85,7 +85,7 @@ Clone this repo.
  
  
  
-  - <h1> Finally to generate sarcasm , pick an utterance from data/non-sarcastic.txt and run the following command (REVERSE) </h1>
+  - <h1> Finally to generate sarcasm , pick an utterance from data/non-sarcastic.txt and run the following command which inclueds REVERSE , RETRIEVE , RANK together </h1>
   
     - Run python generate_sarcasm.py $input
     - This will print the output in the console
