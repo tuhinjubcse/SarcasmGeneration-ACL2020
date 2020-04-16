@@ -105,7 +105,6 @@ def getSentencesOnline(keyword):
                     break
             c = c+1
         if flag:
-            # f1.write('\n')
             for line in s:
                 if 'Sentencedict' in line or 'nbsp' in line or 'href' in line:
                     continue
