@@ -28,7 +28,7 @@ Clone this repo.
 
   
   - <h1> To retrieve the commonsense keyword associated with the input you need to do the below(RETRIEVE) </h1>
-    - Download a chunk of the retreival corpus from the timestamp of the experiment and put inside data folder
+    - Download a chunk of the retreival corpus from the timestamp of the experiment from the link below and put inside data folder
       (https://drive.google.com/file/d/1cX-iy58B0F1K2nVD5sMiSIxd-8lFx7ok/view?usp=sharing) 
       
     - cd comet-commonsense
