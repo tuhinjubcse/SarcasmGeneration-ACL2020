@@ -18,7 +18,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/nas/home/tuhinc/miniconda3/lib/
 
 Clone this repo.
 
-  - cd R-3
+  - cd SarcasmGeneration-ACL2020
   - install nltk
   
   - <h1> To just reverse the valence of the input (REVERSE) </h1>
