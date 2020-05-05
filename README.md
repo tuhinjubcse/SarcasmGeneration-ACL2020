@@ -90,3 +90,12 @@ Clone this repo.
   
     - Run python generate_sarcasm.py $input
     - This will print the output in the console
+    
+ 
+ If you use code or data please cite us
+       @article{chakrabarty2020r,
+        title={$ R\^{} 3$: Reverse, Retrieve, and Rank for Sarcasm Generation with Commonsense Knowledge},
+        author={Chakrabarty, Tuhin and Ghosh, Debanjan and Muresan, Smaranda and Peng, Nanyun},
+        journal={arXiv preprint arXiv:2004.13248},
+        year={2020}
+      }
