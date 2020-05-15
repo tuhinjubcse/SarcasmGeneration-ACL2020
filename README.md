@@ -90,7 +90,9 @@ Clone this repo.
   
     - Run python generate_sarcasm.py $input
     - This will print the output in the console
-    
+
+
+Email me at tc2896@columbia.edu for any problems/doubts. Further you can raise issues on github, or suggest improvements.
  
  If you use code or data please cite us
  ```
