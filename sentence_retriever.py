@@ -38,7 +38,8 @@ def filterSentences(keyword,sentences,utterance):
         sent = sent.lower()
         if sent.startswith(keyword) or sent.endswith(keyword) or sent.endswith(keyword+'.') or sent.endswith(keyword+'?'):
             if islenPermissible(utterance,sent) and (keyword in sent[:-1].split() or len(keyword.split())>1):
-                s.append(sent.capitalize())
+		if not (sent.startswith('And') or sent.startswith('and')):
+                	s.append(sent.capitalize())
     return s
 
 
