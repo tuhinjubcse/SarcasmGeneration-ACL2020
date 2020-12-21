@@ -1,3 +1,5 @@
+**Please leave a star if you use our code**
+
 The input for our experiments are located in the folder data/non-sarcastic.txt
 
 The generation for our paper is a three staged pipeline process
