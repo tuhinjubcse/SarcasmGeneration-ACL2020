@@ -83,7 +83,7 @@ def retrieveCommonSense(utterance):
 
 
 
-#print(retrieveCommonSense(sys.argv[1]))
+print(retrieveCommonSense(sys.argv[1]))
 
 
 
